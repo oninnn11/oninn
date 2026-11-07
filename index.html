@@ -1,11 +1,424 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Niño Guevarra | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #102b54;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #66b3ff;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(
+                135deg, #e9f2ff, #ffffff
+            );
+        }
+
+        .profile-picture {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #102b54;
+        }
+
+        .hero h2 {
+            color: #2563eb;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            max-width: 550px;
+            margin: 15px auto;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1744a0;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 75px 10%;
+            scroll-margin-top: 65px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #102b54;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-weight: bold;
+            color: #2563eb;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Projects */
+        .projects {
+            background: white;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #f4f7fc;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #102b54;
+            color: white;
+            padding: 22px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <label>vnajvndava</label>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Niño Guevarra</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <img
+            src="profile.jpg"
+            alt="Niño Guevarra Profile"
+            class="profile-picture"
+        >
+
+        <h1>Hello, I'm Niño Guevarra</h1>
+        <h2>Information Technology Student</h2>
+
+        <p>
+            I am an aspiring Front-End Developer
+            who enjoys designing and developing
+            modern, responsive, and user-friendly
+            websites.
+        </p>
+
+        <button class="btn" onclick="viewProjects()">
+            View My Projects
+        </button>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            My name is Niño Guevarra, and I am
+            currently studying Information Technology.
+
+            I am passionate about learning programming,
+            web development, and new technologies.
+
+            My goal is to become a professional
+            web developer and create websites
+            that are useful and easy to navigate.
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Java</div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A responsive portfolio website
+                    created using HTML, CSS,
+                    and JavaScript to showcase
+                    my skills and projects.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Management System</h3>
+
+                <p>
+                    A sample system designed to
+                    organize student records
+                    and manage student information.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Web Development Project</h3>
+
+                <p>
+                    A sample website with
+                    an interactive interface
+                    and responsive layout.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Interested in connecting or
+            collaborating with me?
+        </p>
+
+        <p>
+            Feel free to send me a message.
+        </p>
+
+        <button class="btn" onclick="contactMe()">
+            Contact Me
+        </button>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Niño Guevarra.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        function viewProjects() {
+            document.getElementById("projects")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        }
+
+        function contactMe() {
+            alert(
+                "Hello! Thank you for visiting " +
+                "Niño Guevarra's portfolio!"
+            );
+        }
+
+        // Navigation scroll behavior
+        document.querySelectorAll(
+            '.nav-links a'
+        ).forEach(link => {
+
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute('href')
+                    );
+
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+        });
+
+    </script>
+
 </body>
 </html>
